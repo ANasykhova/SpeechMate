@@ -1,0 +1,45 @@
+Web / API server started at 127.0.0.1:4001
+Web / API server started at ::1:4001
+
+  #  node[334253]: void node::ResetStdio() at ../src/node.cc:711
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xdf4a07 node::Assert(node::AssertionInfo const&) [node]
+ 2: 0xda7664  [node]
+ 3: 0xda780c node::SignalExit(int, siginfo_t*, void*) [node]
+ 4: 0x7c7125e42520  [/lib/x86_64-linux-gnu/libc.so.6]
+ 5: 0x7c7125f25b68 epoll_pwait [/lib/x86_64-linux-gnu/libc.so.6]
+ 6: 0x1a573a9  [node]
+ 7: 0x1a43937 uv_run [node]
+ 8: 0xd05b73 node::SpinEventLoopInternal(node::Environment*) [node]
+ 9: 0xe44035  [node]
+10: 0xe449ed node::NodeMainInstance::Run() [node]
+11: 0xdadb5f node::Start(int, char**) [node]
+12: 0x7c7125e29d90  [/lib/x86_64-linux-gnu/libc.so.6]
+13: 0x7c7125e29e40 __libc_start_main [/lib/x86_64-linux-gnu/libc.so.6]
+14: 0xd0398e _start [node]
+FATAL ERROR: v8::HandleScope::CreateHandle() Cannot create a handle without a HandleScope
+----- Native stack trace -----
+
+ 1: 0xcc07da node::OnFatalError(char const*, char const*) [node]
+ 2: 0x1053f26 v8::Utils::ReportApiFailure(char const*, char const*) [node]
+ 3: 0x11fb742 v8::internal::HandleScope::Extend(v8::internal::Isolate*) [node]
+ 4: 0x1054fd8 v8::EscapableHandleScope::EscapableHandleScope(v8::Isolate*) [node]
+ 5: 0xdf4956 node::GetCurrentStackTrace(v8::Isolate*, int) [node]
+ 6: 0xd4d06b node::DumpJavaScriptBacktrace(_IO_FILE*) [node]
+ 7: 0xdf4a13 node::Assert(node::AssertionInfo const&) [node]
+ 8: 0xda7664  [node]
+ 9: 0xda780c node::SignalExit(int, siginfo_t*, void*) [node]
+10: 0x7c7125e42520  [/lib/x86_64-linux-gnu/libc.so.6]
+11: 0x7c7125f25b68 epoll_pwait [/lib/x86_64-linux-gnu/libc.so.6]
+12: 0x1a573a9  [node]
+13: 0x1a43937 uv_run [node]
+14: 0xd05b73 node::SpinEventLoopInternal(node::Environment*) [node]
+15: 0xe44035  [node]
+16: 0xe449ed node::NodeMainInstance::Run() [node]
+17: 0xdadb5f node::Start(int, char**) [node]
+18: 0x7c7125e29d90  [/lib/x86_64-linux-gnu/libc.so.6]
+19: 0x7c7125e29e40 __libc_start_main [/lib/x86_64-linux-gnu/libc.so.6]
+20: 0xd0398e _start [node]
