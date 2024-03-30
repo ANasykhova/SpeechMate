@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "speechmate-39a12",
+    "prod": "speechmate-39a12"
+  }
+}

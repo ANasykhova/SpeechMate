@@ -1,0 +1,17 @@
+{
+    "name": "Makerkit",
+    "short_name": "makerkit",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+          "src": "/assets/images/favicon/favicon.svg",
+          "type": "image/svg"
+        }
+    ],
+    "display": "standalone"
+}
